@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Number</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    var value=prompt("Enter a Value: ");
+    var isNotPrime;
+
+        for (var i = 2; i < value; i++) {
+            if (value % i == 0) {
+                isNotPrime=true;
+                break;
+            }
+
+        }
+    if(isNotPrime){
+        alert("Its not prime");
+    }
+    else{
+        alert("Prime Number");
+    }
+
+</script>
+</body>
+</html>
