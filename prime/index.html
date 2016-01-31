@@ -8,7 +8,8 @@
 <body>
 <!--version-0.1-->
 <input type='number' id='num' />
-<input type='button' onclick='prime()' value='submit' />
+<input type='button' onclick='prime()'  value='submit' />
+<div id="content"> </div>
 <script type="text/javascript">
     //var value=prompt("Enter a Value: ");//
 
@@ -23,13 +24,14 @@ function prime() {
 
     }
     if(isNotPrime){
-        document.write("Its not a prime Number");
+        document.getElementById("content").innerHTML="Its not a Prime Number";
+       // document.write("Its not a prime Number");//
     }
     else{
-        document.write("Its a Prime Number");
+        document.getElementById("content").innerHTML="Its a Prime Number";
+       // document.write("Its a Prime Number");//
     }
 }
-
 
 </script>
 
