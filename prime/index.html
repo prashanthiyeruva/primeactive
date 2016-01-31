@@ -7,24 +7,31 @@
 </head>
 <body>
 <!--version-0.1-->
+<input type='number' id='num' />
+<input type='button' onclick='prime()' value='submit' />
 <script type="text/javascript">
-    var value=prompt("Enter a Value: ");
+    //var value=prompt("Enter a Value: ");//
+
+function prime() {
     var isNotPrime;
-
-        for (var i = 2; i < value; i++) {
-            if (value % i == 0) {
-                isNotPrime=true;
-                break;
-            }
-
+    var val = document.getElementById('num').value;
+    for (var i = 2; i < val; i++) {
+        if (val % i == 0) {
+            isNotPrime = true;
+            break;
         }
+
+    }
     if(isNotPrime){
-        alert("Its not prime");
+        document.write("Its not a prime Number");
     }
     else{
-        alert("Prime Number");
+        document.write("Its a Prime Number");
     }
+}
+
 
 </script>
+
 </body>
 </html>
