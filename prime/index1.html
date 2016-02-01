@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Number</title>
+    <style type="text/css">
+        div.div1{
+            font-family: "Courier New";
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+<!--version-0.1-->
+<input type='number' id='num' />
+<input type='button' onclick='prime()'  value='submit' />
+<div id="content" class="div1">Enter a number</div>
+<script type="text/javascript">
+    //var value=prompt("Enter a Value: ");//
+
+function prime() {
+    var isNotPrime;
+    var val = document.getElementById('num').value;
+    for (var i = 2; i < val; i++) {
+        if (val % i == 0) {
+            isNotPrime = true;
+            break;
+        }
+
+    }
+    if(isNotPrime){
+        document.getElementById("content").innerHTML="Its not a Prime Number";
+       // document.write("Its not a prime Number");//
+    }
+    else{
+        document.getElementById("content").innerHTML="Its a Prime Number";
+       // document.write("Its a Prime Number");//
+    }
+}
+</script>
+</body>
+</html>
