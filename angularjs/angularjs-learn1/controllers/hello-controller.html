@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-app="app">
+
+
+    <div ng-controller="AppCtrl_0">
+        {{apple}}
+        <input type="number" ng-model="a">
+        <input type="number" ng-model="b">
+
+        {{a+b}}
+    </div>
+    <br>============================================<br>
+    <div ng-controller="AppCtrl_1">
+        {{apple}}
+        <input type="number" ng-model="a">
+        <input type="number" ng-model="b">
+        <button  ng-click="doAddition()">add</button>
+        {{addition}}
+    </div>
+    <br>============================================<br>
+    <div ng-controller="AppCtrl_2">
+
+        {{orange}}
+        <input type="number" ng-model="a">
+        <input type="number" ng-model="b">
+        {{addition}}
+
+    </div>
+</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="app.js"></script>
+
+</html>
