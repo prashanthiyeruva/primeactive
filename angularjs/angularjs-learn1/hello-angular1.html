@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        console.log("here iam ")
+        var aFunction=function(){
+            console.log("yahooo .. ")
+        }
+        aFunction();
+
+        var bFunction=function(xFunction){
+           var r= xFunction(2)(4)(6);
+           console.log("result"+r);
+        }
+        bFunction(mul);
+
+
+        function  mul2(z,a,b){
+            return z*a*b;
+        }
+        function mul(z){
+            return function(a){
+                return function(b){
+                    return z*a*b;
+                }
+            }
+        }
+    </script>
+</head>
+<body  >
+
+<div  ng-app ng-init="nameInput='raghu'">
+    <input type="text" ng-model="nameInput"/><br>
+    {{nameInput}} <br>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</html>
