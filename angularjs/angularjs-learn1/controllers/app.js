@@ -30,4 +30,23 @@ capp.controller('AppCtrl_2',['$scope',function($scope){
     }
 }]);
 
+var app = angular.module('MyApp',[]);
+app.controller('control1',function($scope){
+    $scope.fName="prashanthi";
+    $scope.lName="Yeruva";
+});
+
+app.controller('control2',function($scope){
+    $scope.fName="Prashanthi";
+    $scope.lName="Yeruva";
+    $scope.fullName=function(){
+        return $scope.fName+" "+ $scope.lName;
+    };
+});
+app.controller('control3', function($scope){
+    $scope.country=[{country:'India',capital:'NewDelhi'},
+        {country:'USA',capital:'washington DC'},
+        {country:'England',capital:'London'}];
+});
+
 

@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <title>FirstController</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
 </head>
-<body>
-<div ng-app="MyApp" ng-controller="control1">
+<body ng-app="MyApp" >
+<div ng-controller="control1">
+
     <p>Enter First Name: <input type="text" ng-model="fName"> </p>
     <p>Enter Last Name: <input type="text" ng-model="lName"></p>
-    <p>Your Full Name:{{fName+" "+lName}}</p>
+    <h1>Your Full Name:{{fName+" "+lName}}</h1>
 </div>
-<script>
-var app = angular.module('MyApp',[]);
-app.controller('control1',function($scope){
-$scope.fName="prashanthi";
-$scope.lName="Yeruva";
-});
-</script>
+<div ng-controller="control2">
+    <p>First Name: <input type="text" ng-model="fName"> </p>
+    <p>Last Name: <input type="text" ng-model="lName"></p>
+    <h1>Your Entered FullName: {{fullName()}} </h1>
+</div>
+<div ng-controller="control3">
+    <ol>
+        <li ng-repeat="x in country">
+            {{x.country+","+x.capital}}
+        </li>
+    </ol>
+
+</div>
+
 
 </body>
-
+<script src="app.js"></script>
 </html>
