@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Page</title>
+</head>
+<body ng-app=""> <!-- ng-app defines the entire angular application-->
+
+    <p>Name: <input type="text" ng-model="name"></p>
+<!--ng-model directive binds the value of the html control(input type) to application data(i.e name)-->
+    <p ng-bind="name"></p>
+<!--ng-bind directive binds the application data to the HTML view-->
+
+<div ng-init="firstName='prashanthi'"><!-- ng-init directive initialize angularjs application variable-->
+    <p>The name is <span ng-bind="firstName"></span></p>
+    <p>Expression: {{name+firstName}}</p><!--Expression bind data to HTML the same way as ng-bind -->
+</div>
+
+<div ng-init="myColor='red'">
+    <p>Enter color: <input style="background-color:{{myColor}}" ng-model="myColor"> </p>
+</div>
+
+<div ng-init="person={fName:'Prashanthi',lName:'Yeruva'}">
+    <p>The First Name is: {{person.fName}}</p>
+    <p> The Last Name is: {{person.lName}}</p>
+    <p> FullName: {{person.fName+" "+person.lName}}</p>
+    <p>FirstName: <span ng-bind="person.fName"></span></p>
+</div>
+<div ng-init="quant=50;price=10">
+    <p>Enter Quantity: <input type="number" ng-model="quant"> </p>
+    <p>Enter Price: <input type="number" ng-model="price"> </p>
+    <p>Total:{{quant*price}}</p>
+</div>
+<div ng-init="fruits=['apple','mango','kiwi','melon','orange']">
+    <p> An Ordered List</p>
+    <ol>
+        <li ng-repeat="x in fruits">
+            {{x}}
+        </li>
+    </ol>
+</div>
+
+<div ng-init="names=[{fName:'prashanthi',lName:'Yeruva'},
+{fName:'raghu',lName:'nandyala'},
+{fName:'john',lName:'doe'}]">
+    <p> Unorderd list</p>
+    <ul>
+        <li ng-repeat="x in names">
+            {{x.fName+' '+x.lName}}
+        </li>
+    </ul>
+
+</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</html>
